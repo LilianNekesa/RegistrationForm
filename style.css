@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c0c0c;
+}
+.container{
+position: relative;
+width: 350px;
+height: 500px;
+background-color: rgba(100, 237, 164, 0.7);
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+padding-inline: 15px;
+overflow: hidden;
+
+}
+.container::before{
+    content:'';
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: conic-gradient(transparent, transparent, transparent, #aa1685);
+    animation: animate 3s linear infinite;
+    animation-delay: -2s;
+}
+
+.container::after{
+        content:'';
+        position: absolute;
+        width: 650px;
+        height: 650px;
+        background: conic-gradient(transparent, transparent, transparent, #6a16aa);
+        animation: animate 3s linear infinite;
+    
+}
+@keyframes animate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+.img{
+    position: absolute;
+    inset: 5px;
+    background-color: rgb(18, 12, 21);
+    z-index: 1;
+    border-radius: 16px;
+}
+.form-box{
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    display: flex;
+
+}
+.form-box .form h2{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+.form-box .form .input-box{
+
+    position: relative;
+    margin:30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+    color: white;
+    
+}
+
+input:focus ~ label{
+    top: -5px !important;}
+
+.input-box label{
+    position: absolute;
+    color: white;
+    left: 5px;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 16px;
+    pointer-events:none;
+    transition: 0.3s;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.links a{
+    position: relative;
+    top: -15px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover{
+    color:white;
+    background-color: black;
+}
